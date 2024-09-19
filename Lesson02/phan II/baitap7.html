@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký thông tin người sử dụng</title>
+</head>
+<body>
+    <form action="" method="post" enctype="multipart/form-data width="200px">
+        <a href="#"><img src="wufoo-logo-alt.webp" alt="wufoo"></a>
+        <h4>To Do List</h4>
+        <p>.................................................................................................................................................................................</p>
+        <table>
+            <thead>
+                <tr>
+                    <th align="left">Item</th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <input type="text" name="item" id="item" size="100">
+                    </th>
+                </tr>
+                <tr>
+                    <th align="left">Description</th>
+                </tr>
+                <tr>
+                    <th colspan="2">
+                        <textarea name="des" id="des" cols="93" rows="5"></textarea>
+                    </th>
+                </tr>
+                <tr>
+                    <th align="left">
+                        <label for="priority">Priority</label>
+                        <br>
+                        <select name="priority" id="priority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </th>
+                    <th>
+                        <label for="category">Category</label>
+                        <br>
+                        <select name="category" id="category">
+                            <option value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </th>
+                </tr>
+                <th align="left">
+                    <label for="date">Due Date</label>
+                </th>
+                <tr>
+                    <th>
+                        <div class="due-date-container">
+                            <input type="text" id="mm" name="mm" maxlength="2" placeholder="MM">
+                            /
+                            <input type="text" id="dd" name="dd" maxlength="2" placeholder="DD">
+                            /
+                            <input type="text" id="yyyy" name="yyyy" maxlength="4" placeholder="YYYY">
+                        </div>
+                    </th>
+                </tr>
+                
+                <tr>
+                <th align="left">
+                    <label for="status">Status</label>
+                    <br>
+                    <input type="checkbox" name="" id="Done"><label for="Done">Done.</label>
+                </th>
+                </tr>
+                <tr>
+                    <th align="left">
+                    <input type="submit" name="submit" id="submit" value="Submit">
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </form>
+</body>
+</html>
