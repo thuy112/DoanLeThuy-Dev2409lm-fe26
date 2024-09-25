@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chào mừng bạn đến với tạp chí HTML5 & CSS3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+            html,body{
+            font-size: 16px;
+        }
+            #form-dk{
+            background-color: #ccc;
+            padding: 1rem;
+        }
+        form{
+            margin: 2rem auto;
+            padding: 1rem;
+            width: 550px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        h1{ 
+            text-align: center;
+            padding: 1rem 0;
+        border-bottom: 2px solid #ddd;
+        }
+        form .form-group{
+            margin: .5rem 0;
+            display: flex;
+        }
+        form .form-group label{
+            width: 8rem;
+        }
+        form .form-group > div {
+            width: calc(100% - 8rem);
+            display: flex;
+    /* justify-content: space-between; */
+            flex-wrap: wrap;
+        }
+        form .form-group > div span {
+            font-size: .8rem;
+            color: rgb(242, 218, 218);
+            font-style: italic;
+        }
+        .btn{
+            color:rgb(20, 117, 236);
+        }
+    </style>
+</head>
+<body>
+    <section id="form-dk">
+        <form action="" method="post">
+            <h1 style="color:rgb(20, 117, 236);">Chào mừng bạn đến với tạp chí HTML5 & CSS3</h1>
+            <div class="form-group">
+                <label for="tenDanNhap">Tên đăng nhập</label>
+                <div>
+                    <input class="form-control" type="text" name="tenDanNhap" id="tenDanNhap">
+                    <span class="error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="matKhau">Mật khẩu</label>
+                <div>
+                    <input class="form-control" type="password" name="matKhau" id="matKhau">
+                    <span class="error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="thuDienTu">Email</label>
+                <div>
+                    <input class="form-control" type="email" name="thuDienTu" id="thuDienTu">
+                    <span class="error"></span>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="diaChi">Thành phố</label>
+                <div>
+                    <input class="form-control"  type="text" name="diaChi" id="diaChi">
+                    <span class="error"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="dotuoi">Độ tuổi trung bình</label>
+                <div>
+                    <input type="range" id="dotuoi" name="dotuoi" min="0" max="100" value="20" style="width: 100%;">
+                    <span id="dotuoiValue">20</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ngonngu">Bạn muốn theo dõi bài viết từ chủ đề nào?</label>
+                <div style="display: block; ">
+                    <input type="checkbox" name="ngonngu" id="html5"> 
+                    <label for="html5">HTML5 cơ bản</label>
+                    <input type="checkbox" name="ngonngu" id="css3"> 
+                    <label for="css3">CSS3 cơ bản</label>
+                    <br>
+                    <input type="checkbox" name="ngonngu" id="html5">  
+                    <label for="html5">HTML5 nâng cao</label>
+                    <input type="checkbox" name="ngonngu" id="css3"> 
+                    <label for="css3">CSS3 nâng cao</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for=""></label>
+                <div>
+                    <input type="reset" value="Làm lại" name="btnLamLai" id="btnLamLai" class="btn btn-secondary">
+                    <input type="submit" value="Đăng ký" name="btnDangKy" id="btnDangKy" class="btn btn-primary" onclick=" return fn_CheckRegister()">
+                </div>
+            </div>
+        </form>
+    </section>
+    <script>
+        const dotuoiInput = document.getElementById('dotuoi');
+        const dotuoiValue = document.getElementById('dotuoiValue');
+
+        dotuoiInput.addEventListener('input', function() {
+            dotuoiValue.textContent = this.value; // Cập nhật giá trị hiển thị
+        });
+    </script>
+</body>
+</html>
