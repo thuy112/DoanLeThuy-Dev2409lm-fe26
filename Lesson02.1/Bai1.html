@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên danh mục</th>
+                <th>Ngày sửa</th>
+                <th>Thứ tự</th>
+                <th>Trạng thái</th>
+                <th>Tác vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>PHÒNG KHÁCH</td>
+                <td>7/8/2020</td>
+                <td>1</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>PHÒNG NGỦ</td>
+                <td>7/8/2020</td>
+                <td>2</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>PHÒNG BẾP</td>
+                <td>7/8/2020</td>
+                <td>3</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>PHÒNG TẮM</td>
+                <td>7/8/2020</td>
+                <td>4</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>TRẺ EM</td>
+                <td>7/8/2020</td>
+                <td>5</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>VĂN PHÒNG</td>
+                <td>7/8/2020</td>
+                <td>6</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>CẦU THANG</td>
+                <td>7/8/2020</td>
+                <td>7</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>TRANG TRÍ</td>
+                <td>7/8/2020</td>
+                <td>8</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align:right;">Tổng số có:</td>
+                <td id="totalCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const rows = document.querySelectorAll('tbody tr');
+        const totalCount = rows.length - 1; 
+        document.getElementById('totalCount').textContent = totalCount + " danh mục ";
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <table border="1" cellspacing="0" cellpadding="10">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Tên chất liệu</th>
+                <th>Ghi chú</th>
+                <th>Ngày sửa</th>
+                <th>Trạng thái</th>
+                <th>Tác vụ</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Gỗ sồi</td>
+                <td>Gỗ sồi</td>
+                <td>20/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Gỗ lim</td>
+                <td>Gỗ lim</td>
+                <td>20/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Gỗ xoan đào</td>
+                <td>Gỗ xoan đào</td>
+                <td>20/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Gỗ mít</td>
+                <td>Gỗ mít</td>
+                <td>20/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Gỗ lát</td>
+                <td>Gỗ lát</td>
+                <td>24/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Nâu vâm sồi</td>
+                <td>Nâu vâm sồi</td>
+                <td>31/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Trắng sữa</td>
+                <td>Trắng sữa</td>
+                <td>31/7/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>gỗ công nghiệp</td>
+                <td>gỗ công nghiệp</td>
+                <td>10/8/2020</td>
+                <td style="color:rgb(124, 252, 0)">Hoạt động</td>
+                <td>
+                    <button>Xem</button>
+                    <button>Sửa</button>
+                    <button>Xóa</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5" style="text-align:right;">Tổng số có:</td>
+                <td id="totalCount"></td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        const rows = document.querySelectorAll('tbody tr');
+        const totalCount = rows.length - 1; 
+        document.getElementById('totalCount').textContent = totalCount + " chất liệu ";
+    </script>
+</body>
+</html>

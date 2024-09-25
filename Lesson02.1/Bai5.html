@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            margin: 1rem 15%;
+            display: flex;
+        }
+        .col{
+            margin: 0 15px;
+            width: 50%;
+        }
+        img{
+            width: 100%;
+        }
+        .form-group{
+            margin: .5rem 0;
+        }
+        .form-control,textarea {
+            width: 100%;
+            padding: .25rem;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            outline: none;
+        }
+        .form-control:focus,textarea:focus{
+            border: 1px solid #00A2E0;
+        }
+        .btn{
+            padding: .25rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 0;
+            background-color: #00A2E0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="formLienHe">
+        <form id="frmLienHe" name="frmLienHe" action="">
+            <div class="container">
+                <div class="col">
+                    <h3>Liên hệ ngay với chuyên gia của chúng tôi</h3>
+                    <div class="form-group">
+                        <input type="text" name="hoTen" id="hoTen" class="form-control" placeholder="Họ tên">
+                        <span id="errhoten" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
+                        <span id="erremail" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="dienThoai" id="dienThoai" class="form-control" placeholder="Điện thoại">
+                        <span id="errdienthoai" class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="text" name="diaChi" id="diaChi" class="form-control" placeholder="Địa chỉ">
+                        <span id="errdiachi" class="error-message" ></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="noiDung" id="noiDung" cols="30" rows="8" placeholder="nội dung"></textarea>
+                        <span id="errnoidung" class="error-message"></span>
+                    </div>
+                    <div class="form-group " style="text-align: right;">
+                        <input type="submit" value="Gửi liên hệ" class="btn" onclick="return fr_LienHe()">                        
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="pngtree-doctor-with-stethoscope-showing-thumbs-up-png-image_10132884.png" alt="Liên hệ">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        //check form
+        const fr_LienHe = ()=>{
+           let flag=true;
+           let hoTen=document.getElementById("hoTen").value;
+           if(hoTen==""){
+            flag=false;
+            document.getElementById("errhoten").innerText="bạn chưa nhập họ tên.";
+           }else{
+            document.getElementById("errhoten").innerText="OK";
+           }
+
+        //email
+        let email=document.getElementById("email").value;
+        if(email==""){
+            flag=false;
+            document.getElementById("erremail").innerText="bạn chưa nhập họ tên.";
+        }else{
+            document.getElementById("erremail").innerText="OK";
+        }
+        // phone
+        let dienThoai=document.getElementById("dienThoai").value;
+        if(dienThoai==""){
+            flag=false;
+            document.getElementById("errdienthoai").innerText="bạn chưa nhập họ tên.";
+        }else{
+            document.getElementById("errdienthoai").innerText="OK";
+        }
+        //địa chỉ
+        let diaChi=document.getElementById("diaChi").value;
+        if(diaChi==""){
+            flag=false;
+            document.getElementById("errdiachi").innerText="bạn chưa nhập họ tên.";
+        }else{
+            document.getElementById("errdiachi").innerText="OK";
+        }
+
+        if(flag==true)
+                alert("Thành công");
+            return false;
+        }
+    </script>
+</body>
+</html>
